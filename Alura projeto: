@@ -1,0 +1,67 @@
+# 🚀 Dev-Organizer: Padrão Alura de Organização
+
+Este projeto é um framework de organização para desenvolvedores que buscam produtividade máxima. Aqui você encontra a estrutura ideal de pastas, gestão de links e automação de setup.
+
+## 📂 Estrutura Sugerida
+- `~/Developer/Alura/`: Cursos e formações.
+- `~/Developer/Labs/`: Testes rápidos e lógica de programação.
+- `~/Developer/Assets/`: Designs, logos e referências visuais.
+
+## 🛠️ Como usar a Automação
+Para criar sua estrutura de pastas em segundos, execute o script Python incluído:
+```bash
+python setup_workspace.py
+
+
+## 2. O Script de Automação (`setup_workspace.py`)
+Este código é o seu diferencial. Ele "constrói" o ambiente de trabalho sozinho. Salve este arquivo na raiz do seu projeto:
+
+```python
+import os
+
+def criar_ambiente():
+    # Lista de pastas baseada no padrão Alura
+    pastas = [
+        'Developer/Alura/Cursos',
+        'Developer/Alura/Projetos',
+        'Developer/Labs/Exercicios',
+        'Developer/Assets/Imagens',
+        'Developer/Documentacao'
+    ]
+
+    print("--- 🛠️ Iniciando Setup de Organização ---")
+    
+    for pasta in pastas:
+        try:
+            # O exist_ok=True impede erro se a pasta já existir
+            os.makedirs(pasta, exist_ok=True)
+            print(f"✅ Sucesso: {pasta}")
+        except Exception as e:
+            print(f"❌ Erro ao criar {pasta}: {e}")
+
+    print("\n--- ✨ Ambiente configurado com sucesso! ---")
+
+if __name__ == "__main__":
+    criar_ambiente()
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Meus Links de Dev</title>
+    <style>
+        body { font-family: sans-serif; background: #051933; color: white; text-align: center; padding: 50px; }
+        .card { background: #112c4d; padding: 20px; border-radius: 10px; display: inline-block; }
+        a { color: #20c997; text-decoration: none; font-weight: bold; display: block; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>📍 Central de Organização</h1>
+        <p>Henrique - 8º Ano & Dev</p>
+        <hr>
+        <a href="https://cursos.alura.com.br/">💻 Dashboard Alura</a>
+        <a href="https://github.com/">🐙 Meu GitHub</a>
+        <a href="https://nasa.gov">🚀 NASA (Referências Sci-Fi)</a>
+    </div>
+</body>
+</html>
